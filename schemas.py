@@ -37,7 +37,7 @@ get_schema = {
                         }
                     },
                     "required": [
-                        "ids",
+                        "id",
                         "email",
                         "first_name",
                         "last_name",
@@ -78,6 +78,24 @@ post_schema = {
     "type": "object",
     "properties": {
         "id": {
+            "type": "string"
+        },
+        "createdAt": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "createdAt"
+    ]
+}
+
+
+post_schema_register = {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
             "type": "integer"
         },
         "token": {
@@ -91,19 +109,15 @@ post_schema = {
 }
 
 
-post_schema2 = {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "id": {
-      "type": "integer"
+put_schema = {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "updatedAt": {
+            "type": "string"
+        }
     },
-    "token": {
-      "type": "string"
-    }
-  },
-  "required": [
-    "id",
-    "token"
-  ]
+    "required": [
+        "updatedAt"
+    ]
 }
